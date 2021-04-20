@@ -11,23 +11,23 @@ BEGIN
     FOR i FROM 0 TO n-1 STEP 1  DO
     count:=false;
         FOR j FROM 0 TO m-1 STEP 1  DO
-            IF (Set[i] = Set[j]) THEN
+            IF (Set1[i] = Set2[j]) THEN
                 count:=true;
             END_IF
         END_FOR
         IF (count=false) THEN
-            sum += Set[i];
+            sum += Set1[i];
         END_IF
     END_FOR
     FOR j FROM 0 TO m-1 STEP 1  DO
     count:=false;
         FOR i FROM 0 TO n-1 STEP 1  DO
-            IF (Set[j] = Set[i]) THEN
+            IF (Set2[j] = Set1[i]) THEN
                 count:=true;
             END_IF
         END_FOR
         IF (count=false) THEN
-            sum += Set[j];
+            sum += Set2[j];
         END_IF
     END_FOR
 END
@@ -45,23 +45,23 @@ BEGIN
     FOR i FROM 0 TO n-1 STEP 1  DO
     count:=false;
         FOR j FROM 0 TO m-1 STEP 1  DO
-            IF (Set[i] = Set[j]) THEN
+            IF (Set1[i] = Set2[j]) THEN
                 count:=true;
             END_IF
         END_FOR
         IF (count=true) THEN
-            sum += Set[i];
+            sum += Set1[i];
         END_IF
     END_FOR
     FOR j FROM 0 TO m-1 STEP 1  DO
     count:=false;
         FOR i FROM 0 TO n-1 STEP 1  DO
-            IF (Set[j] = Set[i]) THEN
+            IF (Set2[j] = Set1[i]) THEN
                 count:=true;
             END_IF
         END_FOR
         IF (count=true) THEN
-            sum += Set[j];
+            sum += Set2[j];
         END_IF
     END_FOR
 END
