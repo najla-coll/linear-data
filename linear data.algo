@@ -4,19 +4,19 @@ VAR
     Set2 : ARRAY_OF INTEGER[m];
     i,j,n,m,sum:INTEGER;
     count :BOOLEAN;
-    sum :=0;
+    sum =0;
 BEGIN
     Read(Set1);
     Read(Set2);
     FOR i FROM 0 TO n-1 STEP 1  DO
-    count:=false;
+    count =false;
         FOR j FROM 0 TO m-1 STEP 1  DO
             IF (Set1[i] = Set2[j]) THEN
-                count:=true;
+                count =true;
             END_IF
         END_FOR
         IF (count=false) THEN
-            sum += Set1[i];
+            sum = sum + Set1[i];
         END_IF
     END_FOR
     FOR j FROM 0 TO m-1 STEP 1  DO
@@ -27,7 +27,7 @@ BEGIN
             END_IF
         END_FOR
         IF (count=false) THEN
-            sum += Set2[j];
+            sum =sum + Set2[j];
         END_IF
     END_FOR
 END
@@ -50,7 +50,7 @@ BEGIN
             END_IF
         END_FOR
         IF (count=true) THEN
-            sum += Set1[i];
+            sum =sum + Set1[i];
         END_IF
     END_FOR
     FOR j FROM 0 TO m-1 STEP 1  DO
@@ -61,7 +61,7 @@ BEGIN
             END_IF
         END_FOR
         IF (count=true) THEN
-            sum += Set2[j];
+            sum = sum + Set2[j];
         END_IF
     END_FOR
 END
@@ -96,9 +96,9 @@ BEGIN
     FOR i FROM 0 TO Set3.length-1 STEP 1  DO
      
         IF (htab.get(Set3[i] = 1)) THEN
-            sumdistinct += Set3[i];
+            sumdistinct = sumdistinct + Set3[i];
         ELSE
-             sumcommon += Set3[i]*2;
+             sumcommon = sumcommon + Set3[i]*2;
         END_IF
     END_FOR
 END
